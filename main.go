@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"os"
 
-	"cloud.google.com/go/compute/metadata"
+	// "cloud.google.com/go/compute/metadata"
 	"cloud.google.com/go/datastore"
 )
 
@@ -64,9 +64,9 @@ func main() {
 }
 
 func projectID() string {
-	id, err := metadata.ProjectID()
-	if err != nil && os.Getenv("GAE_INSTANCE") != "" {
-		log.Fatalf("Could not determine the project ID: %v", err)
-	}
-	return id
+	// id, err := metadata.ProjectID()
+	// if err != nil && os.Getenv("GAE_INSTANCE") != "" {
+	// log.Fatalf("Could not determine the project ID: %v", err)
+	// }
+	return ""
 }
